@@ -6,72 +6,154 @@
 <h2>Sample ChartJs</h2>
 
 
+<div id="printableArea">
+    <canvas id="myChart"></canvas>
+    </div>
+        <br /><br />
+        <button id="save-btn">Save Chart Image</button>
 
-<canvas id="myChart"></canvas>
+        <button id="print-btn">Test Print Pdf</button>
 
-<br /><br />
-<button id="save-btn">Save Chart Image</button>
+        <script>
+            var data = {
+                "labels": ["January", "February", "March", "April", "May", "June", "July", "August", "November", "December"],
+                "datasets": [{
+                    label: "Sodium intake",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [165, 159, 180, 181, 156, 155, 140]
+                }, {
+                    label: "Sugar intake",
+                    fillColor: "rgba(220,220,220,0.5)",
+                    strokeColor: "#637b85",
+                    pointColor: "#dbba34",
+                    pointStrokeColor: "#637b85",
+                    backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    //fillColor: "rgba(151,187,205,0.2)",
+                    //strokeColor: "rgba(151,187,205,1)",
+                    //pointColor: "rgba(151,187,205,1)",
+                    //pointStrokeColor: "#fff",
+                    //pointHighlightFill: "#fff",
+                    //pointHighlightStroke: "rgba(151,187,205,1)",
+                    data: [128, 148, 140, 119, 186, 127, 190]
+                }]
+            }
 
-<script>
-    var data = {
-        "labels": ["January", "February", "March", "April", "May", "June", "July", "August", "November", "December"],
-        "datasets": [{
-            label: "Sodium intake",
-            fillColor: "rgba(220,220,220,0.2)",
-            strokeColor: "rgba(220,220,220,1)",
-            pointColor: "rgba(220,220,220,1)",
-            pointStrokeColor: "#fff",
-            pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(220,220,220,1)",
-            data: [165, 159, 180, 181, 156, 155, 140]
-        }, {
-            label: "Sugar intake",
-            fillColor: "rgba(220,220,220,0.5)",
-            strokeColor: "#637b85",
-            pointColor: "#dbba34",
-            pointStrokeColor: "#637b85",
-            backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(255, 206, 86, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
-            'rgba(153, 102, 255, 0.2)',
-            'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            //fillColor: "rgba(151,187,205,0.2)",
-            //strokeColor: "rgba(151,187,205,1)",
-            //pointColor: "rgba(151,187,205,1)",
-            //pointStrokeColor: "#fff",
-            //pointHighlightFill: "#fff",
-            //pointHighlightStroke: "rgba(151,187,205,1)",
-            data: [128, 148, 140, 119, 186, 127, 190]
-        }]
-    }
+            var myLine = new Chart(document.getElementById("myChart").getContext("2d"), {
+                type: "line",
+                data: data,
+                options: {
+                    //maintainAspectRatio:false,
+                    //layout:{
+                    //    padding: {
+                    //        top: 200,
+                    //        right:200
+                    //    }
+                    //},
+                    title: {
+                        display: true,
+                        text: 'Custom Chart Title'
+                    }
+                }
 
-    var myLine = new Chart(document.getElementById("myChart").getContext("2d"), {
-        type: "line",
-        data: data,
-    });
+            });
+
+            /*
+            $("#save-btn").click(function () {
+                $("#myChart").get(0).toBlob(function (blob) {
+                    saveAs(blob, "chart_1.png");
+                });
+            });
+
+            var img1;
+
+            $("#print-btn").click(function () {
+                
+                createPDF();
+                
+                var img1, img2, img3;
+
+                jQuery('#printableArea').html2canvas({
+                    onrendered: function (canvas) {
+                        debugger;
+                        img1 = canvas.toDataURL('image/png');
+                    }
+                });
+                jQuery('#printableArea').html2canvas({
+                    onrendered: function (canvas) {
+                        debugger;
+                        img2 = canvas.toDataURL('image/png');
+                    }
+                });
+                jQuery('#printableArea').html2canvas({
+                    onrendered: function (canvas) {
+                        debugger;
+                        img3 = canvas.toDataURL('image/png');
+                    }
+                });
+                debugger;
+                var doc = new jsPDF('p', 'mm');
+                doc.addImage(img1, 'PNG', 0, 0, 210, 297); // A4 sizes
+                doc.addImage(img2, 'PNG', 0, 90, 210, 297); // img1 and img2 on first page
+
+                doc.addPage();
+                doc.addImage(img3, 'PNG', 0, 0, 210, 297); // img3 on second page
+                doc.save("file.pdf");
+                
+            });
+
+     
+
+            function createPDF() {
+                getCanvas().then(function (canvas) {
+                    var
+                     img = canvas.toDataURL("image/png"),
+                     doc = new jsPDF({
+                         unit: 'px',
+                         format: 'a4'
+                     });
+                    doc.addImage(img, 'JPEG', 20, 20);
+                    //doc.addPage();
+                    //doc.addImage(img1, 'JPEG', 50, 50);
+                    doc.save('web-charts-data.pdf');
+                    //form.width(cache_width);
+                });
+            }
 
 
-    $("#save-btn").click(function () {
-        $("#myChart").get(0).toBlob(function (blob) {
-            saveAs(blob, "chart_1.png");
-        });
-    });
+            // create canvas object
+            function getCanvas() {
+                //form.width((a4[0] * 1.33333) - 80).css('max-width', 'none');
+                return html2canvas($('#printableArea'), {
+                    imageTimeout: 2000,
+                    removeContainer: true
+                });
+            }
 
-</script>
+            */
+        </script>
 
 
-<section>
-    fusion chart sample: http://jsfiddle.net/fusioncharts/pnqhtseq/
+        <section>
+            fusion chart sample: http://jsfiddle.net/fusioncharts/pnqhtseq/
 
-</section>
+        </section>

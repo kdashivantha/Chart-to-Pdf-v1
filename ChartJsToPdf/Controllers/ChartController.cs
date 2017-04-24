@@ -13,5 +13,10 @@ namespace ChartJsToPdf.Controllers
         {
             return View();
         }
+
+        public ActionResult BarChart()
+        {
+            return View();
+        }
     }
 }

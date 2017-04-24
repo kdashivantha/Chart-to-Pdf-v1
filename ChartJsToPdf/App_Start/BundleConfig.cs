@@ -24,9 +24,13 @@ namespace ChartJsToPdf
                       "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/chartjs").Include(
-                      "~/Scripts/Chart.min.js",
-                      "~/Scripts/FileSaver.min.js",
-                      "~/Scripts/canvas-toBlob.js"));
+                      "~/Scripts/Chart.min.js"
+                      //"~/Scripts/FileSaver.min.js",
+                      //"~/Scripts/canvas-toBlob.js",
+                      //"~/Scripts/html2canvas.js",
+                      //"~/Scripts/jquery.plugin.html2canvas.js",
+                      //"~/Scripts/jspdf.min.js"
+                      ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
