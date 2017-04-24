@@ -20,10 +20,11 @@ namespace ChartJsToPdf.Controllers
 
         public ActionResult Pdf()
         {
-            //string url = "http://www.bezanilla-solar.cl/libs/jscripts/DevExpressChartJS/Demos/demos/Charts/Bar%20Series/Simplest%20Chart.html";
-            string url =  Request.Url.GetLeftPart(UriPartial.Authority) + "/Chart/BarChart/" ;
+            string url = "http://netdna.webdesignerdepot.com/uploads7/easily-create-stunning-animated-charts-with-chart-js/chartjs-demo.html";
+            //string url =  Request.Url.GetLeftPart(UriPartial.Authority) + "/Chart/BarChart/" ;
 
-            
+            //https://github.com/wkhtmltopdf/wkhtmltopdf/issues/1964
+
             string filename = "test.pdf";
 
             MemoryStream memory = new MemoryStream();
@@ -31,11 +32,13 @@ namespace ChartJsToPdf.Controllers
             Dictionary<string, string> args =
                     new Dictionary<string, string>();
 
-            args.Add("javascript-delay", "2000");
+            args.Add("javascript-delay", "5000");
             args.Add("enable-javascript", "");
             //--minimum-font-size
-            args.Add("minimum-font-size", "12");
+            //args.Add("minimum-font-size", "12");
             //--width 1000--height 1000
+
+            //args.Add("disable-javascript", "");
             args.Add("page-width", "720");
             args.Add("page-height", "2000");
 

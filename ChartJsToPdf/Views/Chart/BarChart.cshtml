@@ -5,8 +5,8 @@
 
 <h2>BarChart</h2>
 
-<div id="printableArea">
-    <canvas id="myChart"></canvas>
+<div style="width:800px;height:200px;">
+    <canvas id="myChart" style="width:800px;height:200px;"></canvas>
 </div>
 
 <script>
@@ -57,6 +57,7 @@
             var myLine = new Chart(document.getElementById("myChart").getContext("2d"), {
                 type: "line",
                 data: data,
+               
                 options: {
                     title: {
                         display: true,
