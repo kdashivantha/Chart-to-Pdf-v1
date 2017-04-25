@@ -18,10 +18,10 @@ namespace ChartJsToPdf.Controllers
             return View();
         }
 
-        public ActionResult Pdf()
+        public ActionResult Pdf(string url)
         {
             //string url = "http://netdna.webdesignerdepot.com/uploads7/easily-create-stunning-animated-charts-with-chart-js/chartjs-demo.html";
-            string url =  Request.Url.GetLeftPart(UriPartial.Authority) + "/Chart/BarChart/" ;
+            string url2 =  Request.Url.GetLeftPart(UriPartial.Authority) + "/Chart/CChart/" ;
 
             //https://github.com/wkhtmltopdf/wkhtmltopdf/issues/1964
 
@@ -32,15 +32,18 @@ namespace ChartJsToPdf.Controllers
             Dictionary<string, string> args =
                     new Dictionary<string, string>();
 
-            args.Add("javascript-delay", "8000");
+            args.Add("javascript-delay", "1000");
             args.Add("enable-javascript", "");
             //--minimum-font-size
             //args.Add("minimum-font-size", "12");
             //--width 1000--height 1000
 
             //args.Add("disable-javascript", "");
-            args.Add("page-width", "720");
-            args.Add("page-height", "800");
+            //args.Add("page-width", "300mm");
+            //args.Add("page-height", "500mm");
+            //args.Add("viewport-size", "1280x1024");
+
+            
 
             PdfDocument document = new PdfDocument() { Url = url, ExtraParams = args };
             PdfOutput output = new PdfOutput() { OutputStream = memory };
@@ -49,6 +52,12 @@ namespace ChartJsToPdf.Controllers
             memory.Position = 0;
 
             return File(memory, "application/pdf", Server.UrlEncode(filename));
+        }
+
+
+        public ActionResult Print()
+        {
+            return new Rotativa.ActionAsPdf("../Chart/CChart");
         }
     }
 }

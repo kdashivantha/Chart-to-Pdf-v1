@@ -3,6 +3,10 @@
     ViewBag.Title = "BarChart";
 }
 
+<div style="width:720px">
+
+    <a href="~/ChartPage/Pdf?url=@Request.Url.AbsoluteUri" target="_blank">Download Pdf</a>
+
 <h2>BarChart</h2>
 
 <!-- line chart canvas element -->
@@ -16,6 +20,21 @@
 
 <script>
 
+    Chart.defaults.global.responsive = false;
+
+    var ctx = $("#buyers").get(0).getContext("2d");
+    ctx.canvas.width = 600;
+    ctx.canvas.height = 350;
+
+    var ctx = $("#countries").get(0).getContext("2d");
+    ctx.canvas.width = 600;
+    ctx.canvas.height = 350;
+
+    var ctx = $("#income").get(0).getContext("2d");
+    ctx.canvas.width = 600;
+    ctx.canvas.height = 350;
+
+
 	// line chart data
 	var buyerData = {
 		labels : ["January","February","March","April","May","June"],
@@ -25,7 +44,23 @@
 				strokeColor : "#ACC26D",
 				pointColor : "#fff",
 				pointStrokeColor : "#9DB86D",
-				data : [203,156,99,251,305,247]
+				data: [203, 156, 99, 251, 305, 247],
+				backgroundColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+				],
+				borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+				],
 			}
 		]
 	}
@@ -36,44 +71,15 @@
 	// draw line chart
 	new Chart(buyers, {
 	    type: "line",
-	    data: buyerData
+	    data: buyerData,
+	    options: {
+	        responsive: false
+	    },
+	    animation: {
+	        animateScale: false
+	    }
 	});
 
-	// pie chart data
-	var pieData = [
-		{
-			value: 20,
-			color:"#878BB6"
-		},
-		{
-			value : 40,
-			color : "#4ACAB4"
-		},
-		{
-			value : 10,
-			color : "#FF8153"
-		},
-		{
-			value : 30,
-			color : "#FFEA88"
-		}
-	];
-
-	// pie chart options
-	var pieOptions = {
-		segmentShowStroke : false,
-		animateScale : true
-	}
-
-	// get pie chart canvas
-	var countries= document.getElementById("countries").getContext("2d");
-
-	// draw pie chart
-	new Chart(countries, {
-	    type: "pie",
-	    data: pieData,
-	    options:pieOptions
-	});
 
 	// bar chart data
 	var barData = {
@@ -82,12 +88,44 @@
 		{
 			fillColor : "#48A497",
 			strokeColor : "#48A4D1",
-			data : [456,479,324,569,702,600]
+			data: [456, 479, 324, 569, 702, 600],
+			backgroundColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+			],
+			borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+			],
 		},
 		{
 			fillColor : "rgba(73,188,170,0.4)",
 			strokeColor : "rgba(72,174,209,0.4)",
-			data : [364,504,605,400,345,320]
+			data: [364, 504, 605, 400, 345, 320],
+			backgroundColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+			],
+			borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+			],
 		}
 		]
 	}
@@ -98,8 +136,15 @@
 	// draw bar chart
 	new Chart(income,{
 	    type: "bar",
-	    data: barData
+	    data: barData,
+	    animation: {
+	        animateScale: false
+	    },
+	    options: {
+	        responsive: false
+	    }
 	});
 
 </script>
 
+</div>
