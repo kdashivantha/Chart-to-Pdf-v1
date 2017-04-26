@@ -16,14 +16,13 @@ namespace RotativaService.Controllers
         }
 
 
-        public ActionResult Print()
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult Print(string pdfCtx)
         {
-            var dd = new Rotativa.WkhtmltopdfDriver();
-           
-            //return new Rotativa.ActionAsPdf("CChart");
-            return new Rotativa.PartialViewAsPdf("CChart")
+            ViewBag.HtmlStr = pdfCtx;
+            return new Rotativa.PartialViewAsPdf("Pdf")
             {
-                
                 PageSize = Size.A4,
                 FileName = "PDF Doc.pdf"
             };

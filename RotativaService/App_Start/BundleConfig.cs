@@ -23,6 +23,10 @@ namespace RotativaService
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/chartjs").Include(
+                     "~/Scripts/Chart.min.js"
+                     ));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));

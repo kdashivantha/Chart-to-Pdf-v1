@@ -9,6 +9,9 @@
 
 <h2>BarChart</h2>
 
+    <div id="testc">ClickME</div>
+
+
 <!-- line chart canvas element -->
 <canvas class="fixed-canvas" id="buyers" width="600" height="400" style="width: 600px !important; height: 400px !important;"></canvas>
 
@@ -145,6 +148,60 @@
 	    }
 	});
 
+	//$("#testc").click(function () {
+	$("#testc").on('click', function () {
+
+	    var canvas = document.getElementById("buyers");
+
+	    var dataURL = canvas.toDataURL();
+	    console.log(dataURL);
+
+
+	    var img = document.createElement('img');
+	    var src = canvas.toDataURL("image/png");
+
+	    img.src = src;
+
+	    var c = document.getElementById("countries");
+	    var ctx = c.getContext('2d');
+	    ctx.drawImage(img, 0, 0);//img.width, img.height);
+
+
+	    var innerHtml = document.getElementsByTagName('html')[0].innerHTML;
+
+
+	    submitFORM('http://localhost:49532/GenPdf/Print', innerHtml, 'POST');
+	    //submitFORM('../Chart/Print', innerHtml, 'POST');
+	});
+
+
+	
+
+	function submitFORM(path, params, method) {
+	    method = method || "post"; 
+
+	    var form = document.createElement("form");
+	    form.setAttribute("method", method);
+	    form.setAttribute("action", path);
+
+	    //Move the submit function to another variable
+	    //so that it doesn't get overwritten.
+	    form._submit_function_ = form.submit;
+
+	   // for(var key in params) {
+	      //  if(params.hasOwnProperty(key)) {
+	            var hiddenField = document.createElement("input");
+	            hiddenField.setAttribute("type", "hidden");
+	            hiddenField.setAttribute("name", 'pdfCtx');
+	            hiddenField.setAttribute("value", params);
+
+	            form.appendChild(hiddenField);
+	      //  }
+	   // }
+
+	    document.body.appendChild(form);
+	    form._submit_function_();
+	}
 </script>
 
 </div>

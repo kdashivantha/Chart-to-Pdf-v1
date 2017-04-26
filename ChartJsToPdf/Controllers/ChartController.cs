@@ -28,7 +28,7 @@ namespace ChartJsToPdf.Controllers
 
         //https://github.com/webgio/Rotativa/blob/master/Rotativa.Demo/Controllers/HomeController.cs
 
-        public ActionResult Print()
+        public ActionResult Print9()
         {
             //return new Rotativa.ActionAsPdf("CChart");
             return new Rotativa.PartialViewAsPdf("CChart")
@@ -42,5 +42,19 @@ namespace ChartJsToPdf.Controllers
 
             return new Rotativa.ActionAsPdf("BarChart");
         }
+
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult Print(string pdfCtx)
+        {
+            ViewBag.HtmlStr = pdfCtx;
+            return new Rotativa.PartialViewAsPdf("CanvasTest")
+            {
+                PageSize = Size.A4,
+                FileName = "PDF Doc.pdf"
+            };
+        }
+
+        
     }
 }

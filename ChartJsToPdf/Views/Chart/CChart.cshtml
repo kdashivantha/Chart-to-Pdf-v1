@@ -18,7 +18,7 @@
     <a href="~/ChartPage/Pdf?url=@Request.Url.AbsoluteUri" target="_blank">Download Pdf</a>
 
     <br/><br/>
-
+    
     <!-- line chart canvas element -->
     <canvas id="buyers" width="600" height="400"></canvas>
 
@@ -121,6 +121,10 @@
 	new Chart(document.getElementById("income1").getContext("2d")).Bar(barData);
 	new Chart(document.getElementById("income2").getContext("2d")).Bar(barData);
 	new Chart(document.getElementById("income3").getContext("2d")).Bar(barData);
+
+
+
+	
     </script>
 
 

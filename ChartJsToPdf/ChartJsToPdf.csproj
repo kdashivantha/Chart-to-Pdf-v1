@@ -303,6 +303,7 @@
     <Content Include="Views\Chart\Index.cshtml" />
     <Content Include="Views\Chart\BarChart.cshtml" />
     <Content Include="Views\Chart\CChart.cshtml" />
+    <Content Include="Views\Chart\CanvasTest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
