@@ -5,23 +5,25 @@
 
 <div style="width:720px">
 
-    <a href="~/ChartPage/Pdf?url=@Request.Url.AbsoluteUri" target="_blank">Download Pdf</a>
-
 <h2>BarChart</h2>
 
-    <div id="testc">ClickME</div>
+    <div id="testc">Download as Pdf</div>
 
 
 <!-- line chart canvas element -->
-<canvas class="fixed-canvas" id="buyers" width="600" height="400" style="width: 600px !important; height: 400px !important;"></canvas>
-
-<!-- pie chart canvas element -->
-<canvas class="fixed-canvas" id="countries" width="600" height="400" style="width: 600px !important; height: 400px !important;"></canvas>
-
+@*<canvas class="fixed-canvas" id="buyers" width="600" height="400" style="width: 600px !important; height: 400px !important;"></canvas>*@
+    <canvas class="fixed-canvas" id="buyers"></canvas>
 <!-- bar chart canvas element -->
-<canvas class="fixed-canvas" id="income" width="600" height="400" style="width: 600px !important; height: 400px !important;"></canvas>
-
+@*<canvas class="fixed-canvas" id="income" width="600" height="400" style="width: 600px !important; height: 400px !important;"></canvas>*@
+    <canvas class="fixed-canvas" id="income" ></canvas>
+<!-- data holder-->
+<div id="dataholder" style="display:none;"></div>
+<div id="logger"></div>
 <script>
+
+    //data holding element
+    var dataHolder = $("#dataholder");
+
 
     Chart.defaults.global.responsive = false;
 
@@ -29,158 +31,61 @@
     ctx.canvas.width = 600;
     ctx.canvas.height = 350;
 
-    var ctx = $("#countries").get(0).getContext("2d");
-    ctx.canvas.width = 600;
-    ctx.canvas.height = 350;
-
     var ctx = $("#income").get(0).getContext("2d");
     ctx.canvas.width = 600;
     ctx.canvas.height = 350;
 
+    var linechartKey = "linedata";
+    var barchartKey = "bardata";
 
-	// line chart data
-	var buyerData = {
-		labels : ["January","February","March","April","May","June"],
-		datasets : [
-		{
-				fillColor : "rgba(172,194,132,0.4)",
-				strokeColor : "#ACC26D",
-				pointColor : "#fff",
-				pointStrokeColor : "#9DB86D",
-				data: [203, 156, 99, 251, 305, 247],
-				backgroundColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-				],
-				borderColor: [
-                    'rgba(255,99,132,1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-				],
-			}
-		]
-	}
-
+  
 	// get line chart canvas
 	var buyers = document.getElementById('buyers').getContext('2d');
-
-	// draw line chart
-	new Chart(buyers, {
-	    type: "line",
-	    data: buyerData,
-	    options: {
-	        responsive: false
-	    },
-	    animation: {
-	        animateScale: false
-	    }
-	});
-
-
-	// bar chart data
-	var barData = {
-	labels : ["January","February","March","April","May","June"],
-	datasets : [
-		{
-			fillColor : "#48A497",
-			strokeColor : "#48A4D1",
-			data: [456, 479, 324, 569, 702, 600],
-			backgroundColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-			],
-			borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-			],
-		},
-		{
-			fillColor : "rgba(73,188,170,0.4)",
-			strokeColor : "rgba(72,174,209,0.4)",
-			data: [364, 504, 605, 400, 345, 320],
-			backgroundColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-			],
-			borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-			],
-		}
-		]
-	}
 
 	// get bar chart canvas
 	var income = document.getElementById("income").getContext("2d");
 
-	// draw bar chart
-	new Chart(income,{
-	    type: "bar",
-	    data: barData,
-	    animation: {
-	        animateScale: false
-	    },
-	    options: {
-	        responsive: false
-	    }
-	});
-
-	//$("#testc").click(function () {
-	$("#testc").on('click', function () {
-
-	    var canvas = document.getElementById("buyers");
-
-	    var dataURL = canvas.toDataURL();
-	    console.log(dataURL);
-
-
-	    var img = document.createElement('img');
-	    var src = canvas.toDataURL("image/png");
-
-	    img.src = src;
-
-	    var c = document.getElementById("countries");
-	    var ctx = c.getContext('2d');
-	    ctx.drawImage(img, 0, 0);//img.width, img.height);
-
-
-	    var innerHtml = document.getElementsByTagName('html')[0].innerHTML;
-
-
-	    submitFORM('http://localhost:49532/GenPdf/Print', innerHtml, 'POST');
-	    //submitFORM('../Chart/Print', innerHtml, 'POST');
-	});
-
-
+	function DrawLineChart() {
+	    // draw line chart
+	    new Chart(buyers, {
+	        type: "line",
+	        data: dataHolder.data(linechartKey),
+	        options: {
+	            responsive: false, scaleOverride: false,
+	            animation: false
+	        },
+	        
+	    });
+	}
+	function DarwBarChart() {
+	    // draw bar chart
+	    new Chart(income, {
+	        type: "bar",
+	        data: dataHolder.data(barchartKey),
+	        options: {
+	            responsive: false, scaleOverride: false,
+	            animation: false
+	        }
+	    });
+	}
 	
+	var formId = "pdfgen";
+	function getInnerHtml() {
+	    //remove previous dynamic form element
+	    var preForm = document.getElementById(formId);
+	    if (preForm) {
+	        preForm.remove();
+	    }
 
-	function submitFORM(path, params, method) {
-	    method = method || "post"; 
+	    var innerHtmlDom = document.getElementsByTagName('html')[0].innerHTML;
+	    return innerHtmlDom;
+	}
+	
+	function submitFORM(path, params, jsFeeds,method) {
+	    method = method || "post";
 
 	    var form = document.createElement("form");
+	    form.setAttribute("id", formId);
 	    form.setAttribute("method", method);
 	    form.setAttribute("action", path);
 
@@ -188,20 +93,50 @@
 	    //so that it doesn't get overwritten.
 	    form._submit_function_ = form.submit;
 
-	   // for(var key in params) {
-	      //  if(params.hasOwnProperty(key)) {
-	            var hiddenField = document.createElement("input");
-	            hiddenField.setAttribute("type", "hidden");
-	            hiddenField.setAttribute("name", 'pdfCtx');
-	            hiddenField.setAttribute("value", params);
 
-	            form.appendChild(hiddenField);
-	      //  }
-	   // }
+	    var hiddenField = document.createElement("input");
+	    hiddenField.setAttribute("type", "hidden");
+	    hiddenField.setAttribute("name", 'domStruct');
+	    hiddenField.setAttribute("value", params);
+
+	    form.appendChild(hiddenField);
 
 	    document.body.appendChild(form);
 	    form._submit_function_();
 	}
+
+
+	$("#testc").on('click', function () {
+	    submitFORM('http://localhost:49532/GenPdf/Print', getInnerHtml(), 'POST');
+	});
+
+	
+	$(document).ready(function () {
+
+	    if (dataHolder.data(linechartKey)) {
+	        DrawLineChart();
+
+	    } else {
+	        $.getJSON("../ChartData/GetBuyerData/", function (data) {
+	            //dataFeeds.linedata = JSON.parse(data.data);
+	            dataHolder.attr("data-" + linechartKey, data.feed);
+	            DrawLineChart();
+	        });
+	    }
+
+
+	    if (dataHolder.data(barchartKey)) {
+	        DarwBarChart();
+	    } else {
+	        $.getJSON("../ChartData/GetBarChartData/", function (data) {
+	            //dataFeeds.bardata = JSON.parse(data.data);
+	            dataHolder.attr("data-" + barchartKey, data.feed);
+	            DarwBarChart();
+	        });
+	    }
+
+	});
+
 </script>
 
 </div>

@@ -18,13 +18,14 @@ namespace RotativaService.Controllers
 
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult Print(string pdfCtx)
+        public ActionResult Print(string domStruct)
         {
-            ViewBag.HtmlStr = pdfCtx;
+            ViewBag.HtmlStr = domStruct;
             return new Rotativa.PartialViewAsPdf("Pdf")
             {
                 PageSize = Size.A4,
-                FileName = "PDF Doc.pdf"
+                FileName = "PDF Doc.pdf",
+                
             };
         }
     }
