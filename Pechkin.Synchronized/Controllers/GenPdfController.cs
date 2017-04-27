@@ -22,7 +22,7 @@ namespace Pechkin.Synchronized.Controllers
 
 
             string filename = "hello_world.pdf";
-            string abc = "sdsfs.abc";
+            string abc = "changed the text on local";
 
             Response.Clear();
 
