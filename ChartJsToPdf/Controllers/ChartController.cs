@@ -48,10 +48,12 @@ namespace ChartJsToPdf.Controllers
         public ActionResult Print(string pdfCtx)
         {
             ViewBag.HtmlStr = pdfCtx;
+
             return new Rotativa.PartialViewAsPdf("CanvasTest")
             {
                 PageSize = Size.A4,
-                FileName = "PDF Doc.pdf"
+                FileName = "PDF Doc.pdf",
+                CustomSwitches = "--javascript-delay 600"
             };
         }
 

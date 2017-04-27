@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -21,12 +22,13 @@ namespace RotativaService.Controllers
         public ActionResult Print(string domStruct)
         {
             ViewBag.HtmlStr = domStruct;
-            return new Rotativa.PartialViewAsPdf("Pdf")
+            var pdf = new Rotativa.PartialViewAsPdf("Pdf")
             {
                 PageSize = Size.A4,
                 FileName = "PDF Doc.pdf",
-                
+                CustomSwitches = "--javascript-delay 1000"
             };
+            return pdf;
         }
     }
 }

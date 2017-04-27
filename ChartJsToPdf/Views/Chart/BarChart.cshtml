@@ -16,24 +16,26 @@
 <!-- bar chart canvas element -->
 @*<canvas class="fixed-canvas" id="income" width="600" height="400" style="width: 600px !important; height: 400px !important;"></canvas>*@
     <canvas class="fixed-canvas" id="income" ></canvas>
+
+
 <!-- data holder-->
 <div id="dataholder" style="display:none;"></div>
-<div id="logger"></div>
+
 <script>
 
     //data holding element
     var dataHolder = $("#dataholder");
 
 
-    Chart.defaults.global.responsive = false;
+    //Chart.defaults.global.responsive = false;
 
-    var ctx = $("#buyers").get(0).getContext("2d");
-    ctx.canvas.width = 600;
-    ctx.canvas.height = 350;
+    //var ctx = $("#buyers").get(0).getContext("2d");
+    //ctx.canvas.width = 600;
+    //ctx.canvas.height = 350;
 
-    var ctx = $("#income").get(0).getContext("2d");
-    ctx.canvas.width = 600;
-    ctx.canvas.height = 350;
+    //var ctx = $("#income").get(0).getContext("2d");
+    //ctx.canvas.width = 600;
+    //ctx.canvas.height = 350;
 
     var linechartKey = "linedata";
     var barchartKey = "bardata";
@@ -51,8 +53,9 @@
 	        type: "line",
 	        data: dataHolder.data(linechartKey),
 	        options: {
-	            responsive: false, scaleOverride: false,
-	            animation: false
+	            //responsive: false,
+	            scaleOverride: false,
+	            //animation: false
 	        },
 	        
 	    });
@@ -63,8 +66,9 @@
 	        type: "bar",
 	        data: dataHolder.data(barchartKey),
 	        options: {
-	            responsive: false, scaleOverride: false,
-	            animation: false
+	            //responsive: false,
+	            scaleOverride: false,
+	            //animation: false
 	        }
 	    });
 	}
