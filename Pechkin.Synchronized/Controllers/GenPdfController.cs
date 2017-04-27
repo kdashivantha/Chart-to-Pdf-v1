@@ -13,6 +13,7 @@ namespace Pechkin.Synchronized.Controllers
         public ActionResult Index()
         {
             // Simple PDF from String
+            //test text to merge
             //byte[] pdfBuffer = new SimplePechkin(new GlobalConfig()).Convert("<html><body><h1>Hello world!</h1></body></html>");
 
             byte[] pdfBuffer = new SimplePechkin(new GlobalConfig()).Convert(
@@ -21,6 +22,7 @@ namespace Pechkin.Synchronized.Controllers
 
 
             string filename = "hello_world.pdf";
+            string abc = "sdsfs.abc";
 
             Response.Clear();
 
