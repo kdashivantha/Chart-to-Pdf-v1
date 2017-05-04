@@ -28,3 +28,8 @@ textarea {
  /* All your print styles go here */
  header, footer, nav { display: none !important; } 
 }
+
+/*important to have page breaks in data table*/
+tr {
+    page-break-inside: avoid;
+}

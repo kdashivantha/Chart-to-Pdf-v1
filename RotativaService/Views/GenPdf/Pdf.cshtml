@@ -1,1 +1,50 @@
-﻿@Html.Raw(ViewBag.HtmlStr)
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/chartjs")
+
+
+</head>
+<body>
+    <script type="text/javascript">
+        Chart.defaults.global.responsive = false;
+    </script>
+
+
+    @Html.Raw(ViewBag.HtmlStr);
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            //note - #dataholder names should be matched in both client and server
+            var chartDataHolder = document.getElementById("dataholder"), attr;
+            // Cycle over each attribute on the element
+            for (var i = 0; i < chartDataHolder.attributes.length; i++) {
+                // Store reference to current attr
+                attr = chartDataHolder.attributes[i];
+                // If attribute nodeName starts with 'data-'
+                if (/^data-/.test(attr.nodeName)) {
+                    //call appropriate js functions
+                    //var fn = attr.nodeName.replace(/^data-/, '');
+                    var data = attr.nodeValue;
+                    var unserialized = CircularJSON.parse(data);
+                    var fn = unserialized.__callerFn;
+                    if (typeof window[fn] === "function") {
+                        window[fn](unserialized);
+                    }
+                }
+            }
+        });
+    </script>
+
+
+</body>
+</html>

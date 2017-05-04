@@ -1,0 +1,409 @@
+﻿/*-------------------------------------------------------------------------
+	Copyright to Assette Private Limited - 2016/2017
+	Created Data - 9/10/2016
+	Last Modified Date - 26/12/2016
+	Code by -  Lahiru Ratnayaka
+--------------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------------
+	Custom Font Installation - OpenSans
+--------------------------------------------------------------------------*/
+@font-face {
+    font-family: 'OpenSans-Light';
+    src: url('../fonts/OpenSans/Light/OpenSans-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/Light/OpenSans-Light.woff') format('woff'), url('../fonts/OpenSans/Light/OpenSans-Light.ttf') format('truetype'), url('../fonts/OpenSans/Light/OpenSans-Light.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'OpenSans-Light-Italic';
+    src: url('../fonts/OpenSans/LightItalic/OpenSans-LightItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/LightItalic/OpenSans-LightItalic.woff') format('woff'), url('../fonts/OpenSans/LightItalic/OpenSans-LightItalic.ttf') format('truetype'), url('../fonts/OpenSans/LightItalic/OpenSans-LightItalic.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans/Regular/OpenSans-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/Regular/OpenSans-Regular.woff') format('woff'), url('../fonts/OpenSans/Regular/OpenSans-Regular.ttf') format('truetype'), url('../fonts/OpenSans/Regular/OpenSans-Regular.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'OpenSans-Italic';
+    src: url('../fonts/OpenSans/Italic/OpenSans-Italic.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/Italic/OpenSans-Italic.woff') format('woff'), url('../fonts/OpenSans/Italic/OpenSans-Italic.ttf') format('truetype'), url('../fonts/OpenSans/Italic/OpenSans-Italic.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'OpenSans-SemiBold';
+    src: url('../fonts/OpenSans/Semibold/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/Semibold/OpenSans-Semibold.woff') format('woff'), url('../fonts/OpenSans/Semibold/OpenSans-Semibold.ttf') format('truetype'), url('../fonts/OpenSans/Semibold/OpenSans-Semibold.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'OpenSans-SemiBold-Italic';
+    src: url('../fonts/OpenSans/SemiboldItalic/OpenSans-SemiboldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/SemiboldItalic/OpenSans-SemiboldItalic.woff') format('woff'), url('../fonts/OpenSans/SemiboldItalic/OpenSans-SemiboldItalic.ttf') format('truetype'), url('../fonts/OpenSans/SemiboldItalic/OpenSans-SemiboldItalic.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url('../fonts/OpenSans/Bold/OpenSans-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/Bold/OpenSans-Bold.woff') format('woff'), url('../fonts/OpenSans/Bold/OpenSans-Bold.ttf') format('truetype'), url('../fonts/OpenSans/Bold/OpenSans-Bold.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'OpenSans-Bold-Italic';
+    src: url('../fonts/OpenSans/BoldItalic/OpenSans-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/BoldItalic/OpenSans-BoldItalic.woff') format('woff'), url('../fonts/OpenSans/BoldItalic/OpenSans-BoldItalic.ttf') format('truetype'), url('../fonts/OpenSans/BoldItalic/OpenSans-BoldItalic.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'OpenSans-ExBold';
+    src: url('../fonts/OpenSans/ExtraBold/OpenSans-ExtraBold.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/ExtraBold/OpenSans-ExtraBold.woff') format('woff'), url('../fonts/OpenSans/ExtraBold/OpenSans-ExtraBold.ttf') format('truetype'), url('../fonts/OpenSans/ExtraBold/OpenSans-ExtraBold.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'OpenSans-ExBold-Italic';
+    src: url('../fonts/OpenSans/ExtraBoldItalic/OpenSans-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/ExtraBoldItalic/OpenSans-ExtraBoldItalic.woff') format('woff'), url('../fonts/OpenSans/ExtraBoldItalic/OpenSans-ExtraBoldItalic.ttf') format('truetype'), url('../fonts/OpenSans/ExtraBoldItalic/OpenSans-ExtraBoldItalic.svg') format('svg');
+}
+
+/*-------------------------------------------------------------------------
+	Custom Font Installation - Interstate
+--------------------------------------------------------------------------*/
+
+
+@font-face {
+    font-family: 'Interstate';
+    src: url('../fonts/Interstate/Regular/Interstate-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Interstate/Regular/Interstate-Regular.woff') format('woff'), url('../fonts/Interstate/Regular/Interstate-Regular.ttf') format('truetype'), url('../fonts/Interstate/Regular/Interstate-Regular.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'Interstate-Bold';
+    src: url('../fonts/Interstate/Bold/Interstate-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Interstate/Bold/Interstate-Bold.woff') format('woff'), url('../fonts/Interstate/Bold/Interstate-Bold.ttf') format('truetype'), url('../fonts/Interstate/Bold/Interstate-Bold.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'Interstate-Light';
+    src: url('../fonts/Interstate/Light/Interstate-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Interstate/Light/Interstate-Light.woff') format('woff'), url('../fonts/Interstate/Light/Interstate-Light.ttf') format('truetype'), url('../fonts/Interstate/Light/Interstate-Light.svg') format('svg');
+}
+
+
+/*-------------------------------------------------------------------------
+	Custom Font Installation - HelveticaNeue
+--------------------------------------------------------------------------*/
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('../fonts/HelveticaNeue/HelveticaNeue.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeue/HelveticaNeueRegular.woff') format('woff'), url('../fonts/HelveticaNeue/HelveticaNeueRegular.ttf') format('truetype'), url('../fonts/HelveticaNeue/HelveticaNeueRegular.svg') format('svg');
+}
+
+/*-------------------------------------------------------------------------
+	Genaral Rules
+--------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------
+	Fonts - Sizes
+--------------------------------------------------------------------------*/
+.text-xx-small {
+    font-family: OpenSans;
+    font-size: xx-small;
+}
+
+.text-x-small {
+    font-family: OpenSans;
+    font-size: x-small;
+}
+
+.text-small {
+    font-family: OpenSans;
+    font-size: small;
+}
+
+.text-medium {
+    font-family: OpenSans;
+    font-size: medium;
+}
+
+.text-large {
+    font-family: OpenSans;
+    font-size: large;
+}
+
+.text-larger {
+    font-family: OpenSans;
+    font-size: larger;
+}
+
+.text-x-large {
+    font-family: OpenSans;
+    font-size: x-large;
+}
+
+.text-xx-large {
+    font-family: OpenSans;
+    font-size: xx-large;
+}
+
+.text-h1 {
+    font-family: OpenSans;
+    font-size: 2.250em;
+    font-weight: 600;
+}
+
+.text-h2 {
+    font-family: OpenSans;
+    font-size: 1.875em;
+    font-weight: 600;
+}
+
+.text-h3 {
+    font-family: OpenSans;
+    font-size: 1.500em;
+    font-weight: 600;
+}
+
+.text-ast-regular {
+    font-family: OpenSans;
+    font-size: 0.750em;
+}
+
+.text-ast-errormsg {
+    color: red;
+    font-family: OpenSans;
+    font-size: x-small;
+}
+/*-------------------------------------------------------------------------
+	Fonts - Colors
+--------------------------------------------------------------------------*/
+.text-c-default {
+    color: #999;
+}
+
+.text-c-green {
+    color: #c1d72e;
+}
+
+    .text-c-green:hover {
+        color: #c1d72e;
+        text-decoration: none;
+    }
+
+.text-c-blue {
+    color: #0096d6;
+}
+
+
+.text-c-darkblue {
+    color: #00529f;
+}
+.text-c-white {
+    color: #fff;
+}
+
+.text-c-black {
+    color: #000;
+}
+
+.text-c-lightgray {
+    color: #ccc;
+}
+
+
+/*-------------------------------------------------------------------------
+	Fonts - Decorations
+--------------------------------------------------------------------------*/
+
+.text-d-uppercase {
+    text-transform: uppercase;
+}
+
+.text-d-underline {
+    text-decoration: underline;
+}
+/*-------------------------------------------------------------------------
+	Buttons
+--------------------------------------------------------------------------*/
+
+.button-green {
+    background-color: #c1d72e;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    color: white;
+    border: 0px;
+    min-height: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-weight: 600;
+    border-radius: 0px;
+    min-width: 150px;
+    cursor:pointer;
+}
+
+.button-gray {
+    background-color: #656565;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    color: white;
+    border: 0px;
+    min-height: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-weight: 600;
+    border-radius: 0px;
+    min-width: 150px;
+    cursor:pointer;
+}
+
+.button-blue {
+    background-color: #0096D6;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    color: white;
+    border: 0px;
+    min-height: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-weight: 600;
+    border-radius: 0px;
+    min-width: 150px;
+    cursor:pointer;
+}
+
+.ast-button {
+    min-height: 40px;
+    padding: 7px 42px;
+}
+
+    .ast-button:hover {
+        text-decoration: none;
+    }
+
+.captcha-container {
+    width:300px;
+    margin-top:15px;
+}
+
+
+.logo-wrapper{
+    margin-top:10px;
+    margin-bottom:5px;
+}
+/*-------------------------------------------------------------------------
+	Login Page
+--------------------------------------------------------------------------*/
+
+.login-container {
+    max-width: 400px;
+    margin: 0px auto;
+    padding-top: 10px;
+}
+
+.login-title-area {
+    padding-bottom: 15px;
+}
+
+.login-box {
+    background-color: white;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+.login-box-heading {
+    background-color: #E9F1FA;
+    padding: 8px 0px 8px 15px;
+}
+
+.login-box-body {
+    padding: 10px 20px 10px 15px;
+}
+
+/*.login-checkbox {
+    -webkit-appearance: none;
+    background-color: #fafafa;
+    border: 1px solid #cacece;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    padding: 9px;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+}*/
+
+.login-textbox-area {
+    margin-bottom: 5px;
+}
+
+.login-checkbox-area {
+    margin-top: 10px;
+}
+
+/*.login-checkbox:active, .login-checkbox:checked:active {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}*/
+
+/*.login-checkbox:checked {
+    background-color: #e9ecee;
+    border: 1px solid #adb8c0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+    color: #99a1a7;
+}
+
+    .login-checkbox:checked:after {
+        content: '\2714';
+        font-size: 14px;
+        position: absolute;
+        top: 0px;
+        left: 3px;
+        color: #99a1a7;
+    }*/
+
+.login-submission-area {
+    margin-top: 10px;
+}
+
+.ast-footer {
+    display: block;
+}
+
+@media screen and (min-width:1366px) {
+    /*-------------------------------------------------------------------------
+	Login Page
+--------------------------------------------------------------------------*/
+
+    .login-container {
+        max-width: 520px;
+        margin: 0px auto;
+        padding-top: 30px;
+    }
+
+    .ast-footer {
+        display: block;
+    }
+}
+
+
+/*@media screen and (min-width: 320px) {
+    body {
+        padding: 15px;
+    }
+
+    .ast-footer {
+        display: none;
+    }
+
+    .text-h1 {
+        font-family: OpenSans;
+        font-size: 1.875em;
+        font-weight: 600;
+    }
+
+    .text-h2 {
+        font-family: OpenSans;
+        font-size: 1.500em;
+        font-weight: 600;
+    }
+
+    .button-blue {
+        min-width: 250px;
+        min-height: 35px;
+        margin-bottom: 5px;
+    }
+
+
+    .login-container {
+        text-align: left;
+        max-width: 520px;
+        margin: 0px auto;
+        padding-top: 0px;
+    }
+}*/

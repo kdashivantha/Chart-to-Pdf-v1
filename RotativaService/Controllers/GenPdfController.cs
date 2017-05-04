@@ -1,34 +1,54 @@
-﻿using Rotativa.Options;
+﻿using HtmlAgilityPack;
+using Rotativa.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using System.Xml.Linq;
 
 namespace RotativaService.Controllers
 {
     public class GenPdfController : Controller
     {
-        // GET: GenPdf
         public ActionResult Index()
         {
             return View();
         }
 
-
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult Print(string domStruct)
+        public ActionResult Print(string domStruct, string fileName)
         {
-            ViewBag.HtmlStr = domStruct;
+            ViewBag.HtmlStr = domStruct.ToString();
+            /*
+            var doc = new HtmlDocument();
+            doc.LoadHtml(domStruct.ToString());
+            var scriptNodes = doc.DocumentNode.Descendants("script");
+
+            //todo check
+            ViewBag.Scripts = scriptNodes.FirstOrDefault().InnerHtml;
+
+            doc.DocumentNode.Descendants()
+                .Where(n => n.Name == "script" || n.Name == "style")
+                .ToList()
+                .ForEach(n => n.Remove());
+
+
+            ViewBag.HtmlStr = doc.DocumentNode.InnerHtml;
+            */
+            //return PartialView("Pdf");
+
             var pdf = new Rotativa.PartialViewAsPdf("Pdf")
             {
                 PageSize = Size.A4,
-                FileName = "PDF Doc.pdf",
-                CustomSwitches = "--javascript-delay 1000"
+                FileName = fileName + ".pdf",
+                CustomSwitches = "--javascript-delay 2000"
+                //CustomSwitches = "--no-stop-slow-scripts --print-media-type --javascript-delay 2000"
             };
             return pdf;
+
         }
     }
 }

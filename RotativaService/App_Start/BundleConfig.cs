@@ -24,12 +24,24 @@ namespace RotativaService
                       "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/chartjs").Include(
-                     "~/Scripts/Chart.min.js"
+                     "~/Scripts/Chart.min.js",
+                     "~/Scripts/CharJsPlugins.js",
+                     "~/Scripts/circular-json.js",
+                     "~/Scripts/moment.js",
+                     "~/Scripts/moment-with-locales.min.js"
+                    
                      ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/Site.css",
+                      
+
+                      "~/Content/datatables.min.css",
+                      "~/Content/font-awesome.min.css",
+                      "~/Content/StyleSheet.css",
+                      "~/Content/layout-client.css"
+                      ));
         }
     }
 }

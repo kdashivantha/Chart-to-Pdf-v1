@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RotativaService", "Rotativa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pechkin.Synchronized", "Pechkin.Synchronized\Pechkin.Synchronized.csproj", "{FFF81D90-55C5-4256-8D28-50CD0C42B2B8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDFserver", "PDFserver\PDFserver.csproj", "{E449FDF2-A88C-4BBB-8BF3-D479347D1A0F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FFF81D90-55C5-4256-8D28-50CD0C42B2B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFF81D90-55C5-4256-8D28-50CD0C42B2B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFF81D90-55C5-4256-8D28-50CD0C42B2B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E449FDF2-A88C-4BBB-8BF3-D479347D1A0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E449FDF2-A88C-4BBB-8BF3-D479347D1A0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E449FDF2-A88C-4BBB-8BF3-D479347D1A0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E449FDF2-A88C-4BBB-8BF3-D479347D1A0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

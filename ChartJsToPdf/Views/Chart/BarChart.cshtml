@@ -8,7 +8,13 @@
 <h2>BarChart</h2>
 
     <div id="testc">Download as Pdf</div>
-
+    
+    <div data-section="date-picker">
+        <button type="button" class="btn btn-default" data-toggle="datepicker">
+            <i class="glyphicon glyphicon-calendar" aria-hidden="true"></i>
+        </button>
+        <div data-position="datepicker" style="visibility:hidden;height:0px;"></div>
+    </div>
 
 <!-- line chart canvas element -->
 @*<canvas class="fixed-canvas" id="buyers" width="600" height="400" style="width: 600px !important; height: 400px !important;"></canvas>*@
@@ -26,7 +32,10 @@
     //data holding element
     var dataHolder = $("#dataholder");
 
-
+    $('[data-position="datepicker"]').datepicker({
+        trigger: $('[data-toggle="datepicker"]'),
+        autoHide:true
+    });
     //Chart.defaults.global.responsive = false;
 
     //var ctx = $("#buyers").get(0).getContext("2d");
@@ -85,7 +94,7 @@
 	    return innerHtmlDom;
 	}
 	
-	function submitFORM(path, params, jsFeeds,method) {
+	function submitFORM(path, params,method) {
 	    method = method || "post";
 
 	    var form = document.createElement("form");
@@ -143,4 +152,4 @@
 
 </script>
 
-</div>
+</datepicker>
