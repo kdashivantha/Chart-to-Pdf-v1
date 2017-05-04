@@ -44,7 +44,13 @@ namespace RotativaService.Controllers
             {
                 PageSize = Size.A4,
                 FileName = fileName + ".pdf",
-                CustomSwitches = "--javascript-delay 2000"
+                CustomSwitches = "--disable-smart-shrinking --javascript-delay 2000",
+                //PageOrientation = Orientation.Landscape,
+
+                PageOrientation = Orientation.Portrait,
+                //PageMargins = new Margins(0, 0, 0, 0),
+                PageWidth = 210,
+                PageHeight = 297
                 //CustomSwitches = "--no-stop-slow-scripts --print-media-type --javascript-delay 2000"
             };
             return pdf;
