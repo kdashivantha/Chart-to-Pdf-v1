@@ -799,13 +799,13 @@ table > tbody > .full-total {
         border: 1px solid #DDD;
         border-radius: 0px;
         display: inline-block !important;
-        width: 30.5em;
+        width: 400px !important;
         font-family: OpenSans;
         font-size: 11px;
         color: #656565;
         text-align: left;
         text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 0.07em;
         height: 32px;
         overflow-x: hidden;
         text-overflow: ellipsis;
@@ -1564,9 +1564,9 @@ table > tbody > .full-total {
         margin-left: 20px;
     }
 
-        .btn-group > .btn:first-child {
+        /*.btn-group > .btn:first-child {
             width: 200px !important;
-        }
+        }*/
 
 
         .btn-group > .dropdown-toggle {
@@ -1677,9 +1677,9 @@ table > tbody > .full-total {
         margin-left: 10px;
     }
 
-        .btn-group > .btn:first-child {
+        /*.btn-group > .btn:first-child {
             width: 242px;
-        }
+        }*/
 
 
         .btn-group > .dropdown-toggle {

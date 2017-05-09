@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using System.Xml.Linq;
-
+using RazorPDF;
 namespace RotativaService.Controllers
 {
     public class GenPdfController : Controller
@@ -42,7 +42,7 @@ namespace RotativaService.Controllers
                 PageSize = Size.A4,
                 FileName = fileName + ".pdf",
                 CustomSwitches = "--disable-smart-shrinking --javascript-delay 2000",// --header-right \"Page[page] of[toPage]\"",
-                //PageOrientation = Orientation.Landscape,
+                                                                                              //PageOrientation = Orientation.Landscape,
 
                 PageOrientation = Orientation.Portrait,
                 //PageMargins = new Margins(0, 0, 0, 0), //defalut 10mm margins
