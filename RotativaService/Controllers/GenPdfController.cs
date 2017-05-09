@@ -22,33 +22,28 @@ namespace RotativaService.Controllers
         public ActionResult Print(string domStruct, string fileName)
         {
             ViewBag.HtmlStr = domStruct.ToString();
-            /*
-            var doc = new HtmlDocument();
-            doc.LoadHtml(domStruct.ToString());
-            var scriptNodes = doc.DocumentNode.Descendants("script");
 
-            //todo check
-            ViewBag.Scripts = scriptNodes.FirstOrDefault().InnerHtml;
-
-            doc.DocumentNode.Descendants()
-                .Where(n => n.Name == "script" || n.Name == "style")
-                .ToList()
-                .ForEach(n => n.Remove());
+            HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
+            doc.LoadHtml(domStruct);
+            var script = doc.DocumentNode.Descendants()
+                                         .Where(n => n.Name == "script")
+                                         .FirstOrDefault();
 
 
-            ViewBag.HtmlStr = doc.DocumentNode.InnerHtml;
-            */
-            //return PartialView("Pdf");
+            ViewBag.HtmlScript = script != null ? script.InnerText:"";
+
+            //footer html
+            // http://stackoverflow.com/questions/15250505/displaying-headers-and-footers-in-a-pdf-generated-by-rotativa
 
             var pdf = new Rotativa.PartialViewAsPdf("Pdf")
             {
                 PageSize = Size.A4,
                 FileName = fileName + ".pdf",
-                CustomSwitches = "--disable-smart-shrinking --javascript-delay 2000",
+                CustomSwitches = "--disable-smart-shrinking --javascript-delay 2000",// --header-right \"Page[page] of[toPage]\"",
                 //PageOrientation = Orientation.Landscape,
 
                 PageOrientation = Orientation.Portrait,
-                //PageMargins = new Margins(0, 0, 0, 0),
+                //PageMargins = new Margins(0, 0, 0, 0), //defalut 10mm margins
                 PageWidth = 210,
                 PageHeight = 297
                 //CustomSwitches = "--no-stop-slow-scripts --print-media-type --javascript-delay 2000"

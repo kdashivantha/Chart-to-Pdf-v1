@@ -5,3 +5,19 @@
 <h3>@ViewBag.Message</h3>
 
 <p>Use this area to provide additional information.</p>
+
+
+
+<div id="log"></div>
+<script type="text/javascript">
+        var code = "@ViewBag.HtmlScript";
+
+        try {
+            (function () {
+                new Function(code);
+            })()
+        }
+        catch (e) {
+            $('#log').html(e);
+        }
+</script>

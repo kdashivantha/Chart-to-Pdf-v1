@@ -1746,10 +1746,10 @@ table > tbody > .full-total {
 }
 
 
-
+/*
 @media print {
-    .a4canvas {
-        width:600px;
-        height:400px;
+    .print-cls {
+        color:red !important;
     }
-}
+
+*/
