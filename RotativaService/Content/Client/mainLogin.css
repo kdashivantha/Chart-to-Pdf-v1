@@ -1,0 +1,224 @@
+﻿.loginHeaderH1 {
+    font-family: 'Open Sans';
+    color: #0096D6;
+    font-weight: 600;
+}
+
+
+.btn .loginButton {
+    background-color: #0096D6;
+    margin-bottom: 10px;
+    color: white;
+    border: 0px;
+    max-height: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-weight: 600;
+    border-radius: 0px;
+    min-width: 145px;
+}
+
+
+
+.OkButton {
+    background-color: #0096D6;
+    margin-top: 15px;
+    color: white;
+    border: 0px;
+    min-height: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-weight: 600;
+    border-radius: 0px;
+    min-width: 150px;
+}
+
+
+
+.loginemptyPara {
+    margin-bottom: 20px;
+    font-family: 'Open Sans';
+    font-size: 12px;
+}
+
+.panel-title .pannelHeading {
+    color: #888;
+}
+
+.topMargineedDiv {
+    margin-top: 10%;
+}
+
+.pannelBody {
+    margin-bottom: 5px;
+}
+
+.errorList {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.assetteWarning {
+    font-size: 14px;
+    color: #464545;
+    margin-left: 5px;
+}
+
+.pannelBody .table-responsive {
+    margin-left: 5px;
+    border: 0px;
+}
+
+.errorIcon {
+    font-size: 30px;
+    color: red;
+}
+
+.buttonGroup {
+    display: inline-block;
+    text-align: center;
+}
+
+.wrongText {
+    color: red;
+    font-size: 15px;
+    margin-right: 5px;
+    text-align: center;
+    align-items: baseline;
+}
+
+.correctText {
+    color: green;
+    margin-right: 5px;
+    font-size: 15px;
+}
+
+.assetteButton {
+    margin-left: 0px;
+}
+
+.table-responsive tr td p {
+    margin-top: 2px;
+    font-size: 12px;
+}
+
+.table-responsive tr td .glyphicon {
+    padding: 1px;
+}
+
+.innersubSection {
+    margin-top: 10px;
+}
+
+.innerFormSection {
+    margin-left: 10px;
+}
+
+span {
+    text-align: center;
+    vertical-align: central;
+}
+
+.errorNoPhone {
+    color: red;
+    font-size: 45px;
+    width: 80%;
+    margin: auto;
+}
+
+.buttonContainer {
+    width: 80%;
+    margin: auto;
+}
+
+#ChangePasswordButton:hover {
+    color: white;
+    cursor: grab;
+}
+
+#CancelButton:hover {
+    color: white;
+    cursor: grab;
+}
+
+#CancelButton:focus {
+    color: white;
+    cursor: grab;
+}
+
+
+
+#CancelButtonForgot:hover {
+    color: white;
+    cursor: grab;
+}
+
+#CancelButtonForgot-lahiru {
+    margin-top: 5px;
+    max-height: 30px;
+}
+
+#CancelButtonForgot:focus {
+    color: white;
+    cursor: grab;
+}
+
+
+
+#ChangePasswordButton:focus {
+    color: white;
+    cursor: grab;
+}
+
+
+#CodeSubmitButton:focus {
+    color: white;
+    cursor: grab;
+}
+
+#CodeSubmitButton:hover {
+    color: white;
+    cursor: grab;
+}
+
+
+
+
+
+/*--------------------------------------------------------------------------
+            Footer Style
+        --------------------------------------------------------------------------*/
+.ast-footer {
+    margin-top: 20px;
+    background: #f2f2f2;
+    color: #656565;
+    padding: 7px 0 7px 0;
+    position: relative;
+    /*bottom: 20px;*/
+    text-align: center;
+}
+
+    .ast-footer > div > .footer-text-line {
+        font-size: 0.689em;
+        font-family: OpenSans-SemiBold;
+    }
+
+    .ast-footer .text-space {
+        margin-right: 20px;
+    }
+
+/*.login-container {
+    min-height: 850px;
+}*/
+/*********************Flags*****************************/
+flag .english_us {
+    height: 47px;
+    background: url('../fonts/flags/us.png') no-repeat;
+    display: inline-block;
+}
+
+/*#french_france{
+
+}*/

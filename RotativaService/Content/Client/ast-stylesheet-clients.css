@@ -1,0 +1,80 @@
+﻿/*-------------------------------------------------------------------------
+	Copyright to Assette LLC - 2016/2017
+	Created Data - 1/5/2017
+	Last Modified Date - 1/5/2017
+	Code by -  Lahiru Ratnayaka
+--------------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------------
+	Custom Font Installation - OpenSans
+--------------------------------------------------------------------------*/
+@font-face {
+	font-family: 'OpenSans-Light';
+	src: url('../fonts/OpenSans/Light/OpenSans-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/Light/OpenSans-Light.woff') format('woff'), url('../fonts/OpenSans/Light/OpenSans-Light.ttf') format('truetype'), url('../fonts/OpenSans/Light/OpenSans-Light.svg') format('svg');
+}
+
+@font-face {
+	font-family: 'OpenSans-Light-Italic';
+	src: url('../fonts/OpenSans/LightItalic/OpenSans-LightItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/LightItalic/OpenSans-LightItalic.woff') format('woff'), url('../fonts/OpenSans/LightItalic/OpenSans-LightItalic.ttf') format('truetype'), url('../fonts/OpenSans/LightItalic/OpenSans-LightItalic.svg') format('svg');
+}
+
+@font-face {
+	font-family: 'OpenSans';
+	src: url('../fonts/OpenSans/Regular/OpenSans-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/Regular/OpenSans-Regular.woff') format('woff'), url('../fonts/OpenSans/Regular/OpenSans-Regular.ttf') format('truetype'), url('../fonts/OpenSans/Regular/OpenSans-Regular.svg') format('svg');
+}
+
+@font-face {
+	font-family: 'OpenSans-Italic';
+	src: url('../fonts/OpenSans/Italic/OpenSans-Italic.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/Italic/OpenSans-Italic.woff') format('woff'), url('../fonts/OpenSans/Italic/OpenSans-Italic.ttf') format('truetype'), url('../fonts/OpenSans/Italic/OpenSans-Italic.svg') format('svg');
+}
+
+@font-face {
+	font-family: 'OpenSans-SemiBold';
+	src: url('../fonts/OpenSans/Semibold/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/Semibold/OpenSans-Semibold.woff') format('woff'), url('../fonts/OpenSans/Semibold/OpenSans-Semibold.ttf') format('truetype'), url('../fonts/OpenSans/Semibold/OpenSans-Semibold.svg') format('svg');
+}
+
+@font-face {
+	font-family: 'OpenSans-SemiBold-Italic';
+	src: url('../fonts/OpenSans/SemiboldItalic/OpenSans-SemiboldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/SemiboldItalic/OpenSans-SemiboldItalic.woff') format('woff'), url('../fonts/OpenSans/SemiboldItalic/OpenSans-SemiboldItalic.ttf') format('truetype'), url('../fonts/OpenSans/SemiboldItalic/OpenSans-SemiboldItalic.svg') format('svg');
+}
+
+@font-face {
+	font-family: 'OpenSans-Bold';
+	src: url('../fonts/OpenSans/Bold/OpenSans-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/Bold/OpenSans-Bold.woff') format('woff'), url('../fonts/OpenSans/Bold/OpenSans-Bold.ttf') format('truetype'), url('../fonts/OpenSans/Bold/OpenSans-Bold.svg') format('svg');
+}
+
+@font-face {
+	font-family: 'OpenSans-Bold-Italic';
+	src: url('../fonts/OpenSans/BoldItalic/OpenSans-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/BoldItalic/OpenSans-BoldItalic.woff') format('woff'), url('../fonts/OpenSans/BoldItalic/OpenSans-BoldItalic.ttf') format('truetype'), url('../fonts/OpenSans/BoldItalic/OpenSans-BoldItalic.svg') format('svg');
+}
+
+@font-face {
+	font-family: 'OpenSans-ExBold';
+	src: url('../fonts/OpenSans/ExtraBold/OpenSans-ExtraBold.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/ExtraBold/OpenSans-ExtraBold.woff') format('woff'), url('../fonts/OpenSans/ExtraBold/OpenSans-ExtraBold.ttf') format('truetype'), url('../fonts/OpenSans/ExtraBold/OpenSans-ExtraBold.svg') format('svg');
+}
+
+@font-face {
+	font-family: 'OpenSans-ExBold-Italic';
+	src: url('../fonts/OpenSans/ExtraBoldItalic/OpenSans-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/ExtraBoldItalic/OpenSans-ExtraBoldItalic.woff') format('woff'), url('../fonts/OpenSans/ExtraBoldItalic/OpenSans-ExtraBoldItalic.ttf') format('truetype'), url('../fonts/OpenSans/ExtraBoldItalic/OpenSans-ExtraBoldItalic.svg') format('svg');
+}
+
+/*-------------------------------------------------------------------------
+	Custom Font Installation - Interstate
+--------------------------------------------------------------------------*/
+
+
+@font-face {
+	font-family: 'Interstate';
+	src: url('../fonts/Interstate/Regular/Interstate-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Interstate/Regular/Interstate-Regular.woff') format('woff'), url('../fonts/Interstate/Regular/Interstate-Regular.ttf') format('truetype'), url('../fonts/Interstate/Regular/Interstate-Regular.svg') format('svg');
+}
+
+@font-face {
+	font-family: 'Interstate-Bold';
+	src: url('../fonts/Interstate/Bold/Interstate-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Interstate/Bold/Interstate-Bold.woff') format('woff'), url('../fonts/Interstate/Bold/Interstate-Bold.ttf') format('truetype'), url('../fonts/Interstate/Bold/Interstate-Bold.svg') format('svg');
+}
+
+@font-face {
+	font-family: 'Interstate-Light';
+	src: url('../fonts/Interstate/Light/Interstate-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Interstate/Light/Interstate-Light.woff') format('woff'), url('../fonts/Interstate/Light/Interstate-Light.ttf') format('truetype'), url('../fonts/Interstate/Light/Interstate-Light.svg') format('svg');
+}

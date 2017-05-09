@@ -35,6 +35,8 @@ namespace RotativaService.Controllers
             //footer html
             // http://stackoverflow.com/questions/15250505/displaying-headers-and-footers-in-a-pdf-generated-by-rotativa
 
+            //var pdf = PartialView("Pdf");
+
             var pdf = new Rotativa.PartialViewAsPdf("Pdf")
             {
                 PageSize = Size.A4,
